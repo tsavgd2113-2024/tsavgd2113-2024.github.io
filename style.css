@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P";
+  overflow-y: hidden;
+  color: #000;
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.btn {
+  font-family: "Press Start 2P";
+  font-size: 19px;
+  background: #eee;
+  color: #000;
+  border: none;
+  padding: .7em 1em;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  color: #fff;
+  background: #188f00;
+}
+
+.start-btn {
+  margin-top: 15px;
+  display: none;
+  font-size: 35px;
+}
+
+.start-menu, .preload-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+}
+
+.start-menu h1 {
+  margin-top: 25px;
+  font-size: 50px;
+  background: linear-gradient(90deg, rgba(0,205,29,1) 10%, rgba(23,117,0,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.preload-menu {
+  display: none;
+}
+
+.preload-menu .typewriter {
+  margin: 35px auto;
+  max-width: 1100px;
+  white-space: pre-wrap;
+}
+
+.preload-menu .continue-btn {
+  display: none;
+}
+
+.success-menu h1, .success-menu button,
+.restart-menu h1, .restart-menu button {
+  margin-top: 25px;
+}
+
+.success-menu p,
+.restart-menu p {
+  margin: 25px auto;
+  max-width: 1100px;
+}
+
+#assets, #audio {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+#container {
+  text-align: center;
+}
+
+.layer {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#gameSpace {
+  background-color: #ccc;
+  height: 100vh;
+  width: auto;
+  aspect-ratio: 16 / 9;
+  display: none;
+}
+
+.pause-menu, .restart-menu, .success-menu {
+  display: none;
+}
+
+.dev-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(0,0,0,0.5);
+  color: #fff;
+}
+
+.dev-menu button {
+  display: block;
+  width: 115px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0,0,0,0.5);
+  color: #fff;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Digital Defender</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Game framework -->
+  <script defer src="constructor.js"></script>
+  <script defer src="scriptObjects.js"></script>
+  <script defer src="repeat.js"></script>
+  <script defer src="library.js"></script>
+
+  <!-- Levels -->
+  <script defer src="levels/level1.js"></script>
+  <script defer src="levels/level2.js"></script>
+  <script defer src="levels/level3.js"></script>
+
+  <!-- Game logic (drawing to screen) (don't actually draw on the screen- that'd be bad) -->
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div id="assets">
+    <!-- INVENTORY and WEAPONS -->
+    <img src="assets/dev/gametest.jpg" id="test">
+    <img src="assets/misc/flashlight.png" id="flashlight">
+    <img src="assets/misc/binary_gun.png" id="binaryGun">
+    <img src="assets/misc/glitch_sword_right.png" id="glitchSwordRight">
+    <img src="assets/misc/glitch_sword_left.png" id="glitchSwordLeft">
+    <img src="assets/misc/spear.png" id="spear">
+    <img src="assets/misc/spear_left.png" id="spearLeft">
+    <img src="assets/misc/spear_right.png" id="spearRight">
+
+    <!-- CHARACTERS -->
+    <!-- MAIN PLAYER -->
+    <img src="assets/characters/player/left/000.png" id="pLeft000">
+    <img src="assets/characters/player/left/001.png" id="pLeft001">
+
+    <img src="assets/characters/player/right/000.png" id="pRight000">
+    <img src="assets/characters/player/right/001.png" id="pRight001">
+    
+    <img src="assets/characters/player/BinaryGun_Left/000.png" id="BG_pLeft000">
+    <img src="assets/characters/player/BinaryGun_Left/001.png" id="BG_pLeft001">
+
+    <img src="assets/characters/player/BinaryGun_Right/000.png" id="BG_pRight000">
+    <img src="assets/characters/player/BinaryGun_Right/001.png" id="BG_pRight001">
+
+    <!-- WORM ENEMY -->
+    <img src="assets/characters/worm/000.png" id="worm000">
+    <img src="assets/characters/worm/001.png" id="worm001">
+    <img src="assets/characters/worm/002.png" id="worm002">
+    <img src="assets/levels/level1/Tiles/Grass.png" id="grass">
+    <img src="assets/levels/level1/Tiles/LiteralGrass_1.png" id="LiteralGrass_1">
+    <img src="assets/levels/level1/Tiles/LiteralGrass_2.png" id="LiteralGrass_2">
+    <img src="assets/levels/level1/Tiles/LiteralGrass_3.png" id="LiteralGrass_3">
+    <img src="assets/levels/level1/LeafyPlant.png" id="LeafyPlant">
+    <img src="assets/levels/level1/Tiles/Dirt.png" id="dirt">
+
+    <!-- TROJAN HORSE ENEMY -->
+    <img src="assets/characters/trojanhorse/left/000.png" id="trojanHorseLeft000">
+    <img src="assets/characters/trojanhorse/left/001.png" id="trojanHorseLeft001">
+
+    <img src="assets/characters/trojanhorse/right/000.png" id="trojanHorseRight000">
+    <img src="assets/characters/trojanhorse/right/001.png" id="trojanHorseRight001">
+
+    <!-- EVIL PLAYER -->
+    <img src="assets/characters/evilplayer/left/000.png" id="evilPlayerLeft000">
+    <img src="assets/characters/evilplayer/left/001.png" id="evilPlayerLeft001">
+
+    <img src="assets/characters/evilplayer/right/000.png" id="evilPlayerRight000">
+    <img src="assets/characters/evilplayer/right/001.png" id="evilPlayerRight001">
+    
+    <!-- WEAPONS -->
+    <img src="assets/misc/zero.png" id="zero">
+    <img src="assets/misc/one.png" id="one">
+
+    <!-- LEVEL 1 -->
+    <img src="assets/levels/level1/bg.jpg" id="level1Background">
+
+    <!-- LEVEL 2 -->
+
+
+    <!-- LEVEL 3 -->
+    <img src="assets/levels/level3/bg.png" id="level3Background">
+  </div>
+  <div id="container">
+    <div id="startMenu" class="start-menu">
+      <div class="title">
+        <h1>Digital Defender</h1>
+      </div>
+      <p id="loadingDisplay">Loading...</p>
+      <button id="startBtn" class="btn start-btn">Start game</button>
+    </div>
+    <div id="preloadMenu" class="preload-menu">
+      <p id="typewriter" class="typewriter"></p>
+      <button id="continueBtn" class="btn continue-btn">Continue</button>
+    </div>
+    <div class="overlay pause-menu" id="pause-menu">
+      <h1>Game paused</h1>
+      <button id="resume-btn" class="btn" onclick="togglePause()">Resume game (ESC)</button>
+    </div>
+    <div class="overlay restart-menu" id="restartMenu">
+      <h1>Level Failed!</h1>
+      <p id="levelFailMessage">Good luck next time...</p>
+      <button class="btn" id="restartBtn">Restart level</button>
+    </div>
+    <div class="overlay success-menu" id="successMenu">
+      <h1>Level Complete!</h1>
+      <p id="levelCompleteMessage">Good job!</p>
+      <button class="btn" id="nextBtn">Next Level</button>
+    </div>
+    <canvas id="gameSpace" height="1080" width="1920"></canvas>
+  </div>
+
+  <div id="devMenu" class="dev-menu">
+    <p>DEVELOPER</p>
+    <button id="l1Btn">Level 1</button>
+    <button id="l2Btn">Level 2</button>
+    <button id="l3Btn">Level 3</button>
+  </div>
+
+</body>
+
+</html>
