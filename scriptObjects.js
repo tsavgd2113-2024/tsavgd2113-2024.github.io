@@ -33,6 +33,7 @@ var moving_platforms = [];
 // weapons
 var swordCollectable = [];
 var showCollectableDialog = false;
+var hasCollectedSword = false;
 var sword;
 var bullets = [];
 

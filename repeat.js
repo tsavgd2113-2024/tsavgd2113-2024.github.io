@@ -145,8 +145,8 @@ function draw(alpha, ap) {
     }
   }
   if (weapon) {
-    GUIRenderer.drawText(`${inventory[weapon]["name"]}: Click or Enter`,"white", "30px DotGothic16",70,850);
     GUIRenderer.drawRect(500,75,"rgba(0,0,0,0.5)", 60,800);
+    GUIRenderer.drawText(`${inventory[weapon]["name"]}: Click or Enter`,"white", "30px DotGothic16",70,850);
   }
   GUIRenderer.drawRect(500, 75, "rgba(0,0,0,0.5)", 0, 0);
   //GUIRenderer.drawText(`Player HP: ${Math.ceil(player.HP)}`, "white", "45px DotGothic16", 25, 50);

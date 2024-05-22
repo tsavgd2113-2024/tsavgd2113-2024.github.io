@@ -73,7 +73,11 @@ LevelManager.levels.level2 = function() {
   swordCollectable.push(new ImageComponent(200, 75, "glitchSwordRight", 550, -290));
   intangible = []
   images = []
-  player.move(600, 1500, antiPlayer);
+  if (hasCollectedSword) {
+    player.move(900, -300, antiPlayer);
+  } else {
+    player.move(600, 1500, antiPlayer);
+  }
   level2Part1Audio.play();
   walls.push(new Component(50, 2500, "rgba(0,0,0,0)", 100, -1000)); // left border
 
@@ -84,9 +88,9 @@ LevelManager.levels.level2 = function() {
   
   walls.push(new PlatformComponent(300, 47, bgcolor, 950, 1260, "10111", 1));
   walls.push(new PlatformComponent(300, 47, bgcolor, 950, 1020, "101010", 2));
-  walls.push(new PlatformComponent(300, 47, bgcolor, 950, 800, "1110110", 2.5));
+  walls.push(new PlatformComponent(300, 47, bgcolor, 950, 800, "1110110", 2.3));
   walls.push(new PlatformComponent(300, 47, bgcolor, 950, 600, "011010001", 1));
-  walls.push(new PlatformComponent(300, 47, bgcolor, 950, 400, "011010", 4));
+  walls.push(new PlatformComponent(300, 47, bgcolor, 950, 400, "011010", 2.5));
   walls.push(new PlatformComponent(300, 47, bgcolor, 950, 200, "10101011", 2));
   walls.push(new PlatformComponent(300, 47, bgcolor, 950, 0, "011010101", 4));
   walls.push(new PlatformComponent(300, 47, bgcolor, -50, -200, "01010100 01110101 01110010 01101110 00100000 01100010 01100001 01100011 01101011", 0));

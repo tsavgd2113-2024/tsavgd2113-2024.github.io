@@ -358,10 +358,13 @@ function swordCollectableUpdate() {
   for (let i = 0; i < swordCollectable.length; i++) {
     if (distance(swordCollectable[i], player) < 100) {
       showCollectableDialog = true;
+      hasCollectedSword = true;
 
       if (gameSpace.keys && gameSpace.keys["KeyF"]) {
         swordCollectable.splice(i, 1);
         addItem("sword");
+        pLeftAnim.start()
+        selectItem(1)
         trojanHorse[0].active = true;
         GameAudio.stopAll();
         level2Part2Audio.play();
