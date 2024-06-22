@@ -9,7 +9,7 @@ const level = [
   "d                                                              d ",
   "d                                                              d ",
   "d                                                              d ",
-  "d rrrrrr p rrrrrrrrrrrrr rrr rr     rrr    p rr  rrrrrrrr  rrrrd ",
+  "d rrrrrr   rrrrrrrrrrrrr rrr rr     rrr      rr  rrrrrrrr  rrrrd ",
   "dggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggd",
   "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
   "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
@@ -42,16 +42,11 @@ var Props = {
     var type = Math.random()
     if (type<0.6) {
       type = 1
-    } else if (type < 0.85) {
-      type = 2
     } else {
-      type = 3
+      type = 2
     }
     console.log(`LiteralGrass_${type}`)
     intangible.push(new ImageComponent(unit+1, unit+1, `LiteralGrass_${type}`, unit*x, unit*y))
-  },
-  'p' : (x,y) => {
-    intangible.push(new ImageComponent(unit+1, unit+10, "LeafyPlant", unit*x, unit*y))
   },
   ["Tiles"] : {
     'g' : "grass",
